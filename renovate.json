@@ -1,0 +1,8 @@
+{
+  "enabledManagers": ["pip_requirements"],
+  "python": {
+    "registryUrls": [
+      "https://pypi.org/simple/"
+    ]
+  }
+}

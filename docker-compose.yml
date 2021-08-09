@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  renovate_test:
+    image: renovate/renovate:25.67.0
+    user: ${UID}:${GID}
+    volumes:
+      - "./config.js:/usr/src/app/config.js"
+    environment:
+      - LOG_LEVEL=debug
+      - RENOVATE_TOKEN=${RENOVATE_TOKEN}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - RENOVATE_REPOSITORIES=josebama/renovate-issue-11139-reproduction
